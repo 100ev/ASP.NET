@@ -1,0 +1,63 @@
+﻿@model SpaceWeightConverter.Models.Calculation
+
+@{
+    ViewBag.Title = "Welcome to the space weight converter!";
+}
+
+<head>
+    <title>Space Weight Converter</title>
+</head>
+<body>     
+    <header>
+        <h1 style="text-align: center; color:bisque; font-size:xx-large; text-shadow:2px 2px 8px #ff0000">
+            Welcome to the space weight converter
+        </h1>
+    </header>
+    <fieldset>
+        @using (Html.BeginForm("Calculate", "Home", FormMethod.Post, new { @class = "form-inline" }))
+        {
+            <div class="SpObjName" style="text-align:center; position:center">
+                <label for="SpObjName">Please select the cosmic object name </label>
+                @Html.DropDownListFor(model => model.SpaceObjectName, new[] {
+               new SelectListItem { Text = "Mercury", Value = "Mercury" },
+               new SelectListItem { Text = "Venus", Value = "Venus" },
+               new SelectListItem { Text = "Earth", Value = "Earth" },
+               new SelectListItem { Text = "Moon", Value = "Moon" },
+               new SelectListItem { Text = "Mars", Value = "Mars" },
+               new SelectListItem { Text = "Jupiter", Value = "Jupiter" },
+               new SelectListItem { Text = "Saturn", Value = "Saturn" },
+               new SelectListItem { Text = "Uranus", Value = "Uranus" },
+               new SelectListItem { Text = "Neptune", Value = "Neptune" },
+               new SelectListItem { Text = "Pluto", Value = "Pluto" },
+           }, new { @class = "form-group" })
+            </div>
+
+            <div class="mUnit" style="text-align: center">
+                <label for="mUnit">Please choose your prefered measure unit! </label>
+                @Html.DropDownListFor(model => model.Operator,
+                new[] {
+                    new SelectListItem { Text = "pound", Value = "pound" },
+                    new SelectListItem { Text = "kg", Value = "kg" },
+                }, new { @class = "form-group" })
+            </div>
+            <div class="weight" style="text-align: center">
+                <label for="weight">Please enter your weight </label>
+                @Html.TextBoxFor(model => model.Weight, new { @class = "form-group" })
+            </div>
+            <div class="result" style="text-align: center">
+                <button style="margin-left:auto;margin-right:auto;" value="Submit" type="submit" class="btn btn-primary">Calculate</button>
+                @Html.TextBoxFor(model => model.Result, null, new { @class = "form-group" })
+            </div>
+            <div class="info">
+                <a for="info">
+                    As a species, we humans are constantly evolving.
+                    <br />We are discovering new worlds and crossing existing borders.<br />
+                    We have yet to understand what the universe has to offer ...
+                </a>
+            </div>
+        }
+    </fieldset>
+</body>
+
+
+

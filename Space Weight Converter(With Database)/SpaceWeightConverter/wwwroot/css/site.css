@@ -1,0 +1,58 @@
+﻿body {
+    background: radial-gradient(circle, #AFEEEE, yellow, #663399);
+}
+
+fieldset {
+    position: absolute;
+    margin: auto;
+    left: 175px;
+    top: 90px;
+    bottom: 75px;
+    right: 175px;
+    background-color:ButtonShadow;
+    border-style: dotted;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.SpObjName {
+    position: relative;
+    top: 50px;
+    font: bold;
+    font-size: x-large;
+    color:burlywood;
+}
+
+.mUnit {
+    position: relative;
+    top: 100px;
+    font: bold;
+    font-size: x-large;
+    color: burlywood;
+}
+
+.weight {
+    position: relative;
+    top: 150px;
+    font: bold;
+    font-size: x-large;
+    color: burlywood;
+}
+
+.info {
+    color: burlywood;
+    font-size: large;
+    position: relative;
+    top: 275px;
+    left: 275px;
+    font-style: italic;
+    text-shadow: 2px 2px 8px #ff0000;
+}
+
+.result {
+    position: relative;
+    top: 200px;
+    right: 15px;
+    font: bold;
+    font-size: x-large;
+    color: burlywood;
+}

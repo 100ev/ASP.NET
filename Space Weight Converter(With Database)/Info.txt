@@ -1,0 +1,7 @@
+Greetings!
+
+This is a sample app, to figure out 
+how much do you weigh, on the different
+planets and moons.
+
+Enjoy! :)
